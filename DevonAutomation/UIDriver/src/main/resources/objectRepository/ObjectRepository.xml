@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objectRepository>
+		
+		<page name="Headers">
+	           <field name="ourproductsLink" findBy="xpath" findByValue="//a[text()='Our product']"/>
+	           <field name="whatwedoLink" findBy="xpath" findByValue="//a[@href='what-we-do']"/>
+	           <field name="servicesLink" findBy="xpath" findByValue="//a[@title='Services']"/>
+	           <field name="referencesLink" findBy="xpath" findByValue="//a[@title='References']"/>
+	           <field name="partnersLink" findBy="xpath" findByValue="//a[@title='Partners']"/>
+	           <field name="downloadsLink" findBy="xpath" findByValue="//a[@title='Downloads']"/>
+	           <field name="AboutusLink" findBy="xpath" findByValue="//a[@title='About us']"/>
+	    </page>
+	    
+	    <page name="Services">
+	           <field name="HelpDesk" findBy="xpath" findByValue="//div//h3[contains(text(),'Helpdesk')]"/>
+	           <field name="Consultancy" findBy="xpath" findByValue="//div//h3[contains(text(),'Consultancy')]"/>
+	           <field name="Training" findBy="xpath" findByValue="//div//h3[contains(text(),'Training')]"/>
+	           
+	    </page>
+
+		<page name="LoginPage">
+				<field name="username" findBy="id" findByValue="user-email-address"/>
+				<field name="password" findBy="id" findByValue="user-password" />
+				<field name="submitButton" findBy="id"  findByValue="login-button" />
+		</page>
+
+		
+</objectRepository>
+
+
+

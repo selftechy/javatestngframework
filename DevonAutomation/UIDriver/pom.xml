@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.devon.automation</groupId>
+    <artifactId>DevonAutomation</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.devon.automation.uidriver</groupId>
+  <artifactId>UIDriver</artifactId>
+  <packaging>jar</packaging>
+  <name>UIDriver</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+    <dependencies>
+        <dependency>
+            <groupId>nl.prowareness.automation</groupId>
+            <artifactId>pro-automation</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}\..\lib\pro-automation-1.0.jar</systemPath>
+            <exclusions>
+        		<exclusion>
+        			<artifactId>browsermob-core</artifactId>
+        			<groupId>net.lightbody.bmp</groupId>
+        		</exclusion>
+        	</exclusions>
+        </dependency>
+        <dependency>
+            <groupId>ojdbc6</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>ojdbc6</version>
+            <scope>system</scope>
+            <systemPath>${basedir}\..\lib\ojdbc6.jar</systemPath>
+        </dependency>
+        <dependency>
+	<groupId>com.microsoft.ews-java-api</groupId>
+	<artifactId>ews-java-api</artifactId>
+	<version>2.0</version>
+</dependency>
+        <dependency>
+	<groupId>org.jsoup</groupId>
+	<artifactId>jsoup</artifactId>
+	<version>1.7.2</version>
+</dependency>
+       
+        <dependency>
+        	<groupId>net.lightbody.bmp</groupId>
+        	<artifactId>browsermob-core-littleproxy</artifactId>
+        	<version>2.1.0-beta-3</version>
+
+        </dependency>
+    </dependencies>
+</project>
