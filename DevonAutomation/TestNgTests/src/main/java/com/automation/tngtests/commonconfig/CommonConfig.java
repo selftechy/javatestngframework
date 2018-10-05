@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.automation.tngtests.common.TestReportCleanUp;
-import com.automation.tngtests.common.TestReportMerger;
 import com.automation.tngtests.exceptions.WebshopDataFailureException;
 
 import nl.prowareness.automation.selenium.webdriver.SeleniumWebDriver;
@@ -29,7 +28,7 @@ import nl.prowareness.automation.selenium.webdriver.SeleniumWebDriver;
 
 		@PreDestroy
 		public void afterRun() throws WebshopDataFailureException {
-				TestReportMerger.mergeAndPublishReport();
+				//TestReportMerger.mergeAndPublishReport();
 				killdriver();
 		}
 

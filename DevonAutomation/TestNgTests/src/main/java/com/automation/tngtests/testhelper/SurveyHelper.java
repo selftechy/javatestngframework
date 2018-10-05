@@ -1,22 +1,19 @@
-package com.automation.tngtests.glue;
+package com.automation.tngtests.testhelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.stereotype.Component;
+import org.testng.annotations.Test;
 
-import com.automation.tngtests.config.SpringContextConfig;
 import com.automation.uidriver.pageclass.AgileCockpitLoginPage;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import nl.prowareness.automation.dao.XcelDataProvider;
 import nl.prowareness.automation.selenium.assertions.AssertWithScreenShot;
 import nl.prowareness.automation.selenium.exceptions.AutomationDataException;
 import nl.prowareness.automation.selenium.webdriver.SeleniumWebDriver;
 
-@ContextConfiguration(classes = { SpringContextConfig.class })
-public class SurveyStepDefinition {
-
+@Component
+public class SurveyHelper {
+	
 	@Autowired
 	SeleniumWebDriver webDriver;
 
@@ -26,25 +23,20 @@ public class SurveyStepDefinition {
 	@Autowired
 	AgileCockpitLoginPage agileCockpitLoginPage;
 	
-	@Given("^a user logs into the agile cockpit$")
 	public void navigateToHomePage(){
 		AssertWithScreenShot.assertTrue(true, webDriver);
-		//agileCockpitLoginPage.Login();
+		agileCockpitLoginPage.Login();
 	}
 	
-	
-	@When("^creates a survey$")
+	@Test
 	public void createSurvey() throws AutomationDataException{
-        String cwd = System.getProperty("user.dir");
-        System.out.println("Current working directory : " + cwd);		
 		System.out.println("No of sheets: "+xlDataProvider.getData().getSheetDataByName().get("WA_Retail-SalesMarketing_-Profi").getRowData().get(13));
 		AssertWithScreenShot.assertTrue(true, webDriver);
 	}
 	
-	@Then("^newly created survey should be present in the system$")
 	public void validateHeadersInHomePage(){
 		AssertWithScreenShot.assertTrue(true, webDriver);
 	}
 	
-	
+
 }

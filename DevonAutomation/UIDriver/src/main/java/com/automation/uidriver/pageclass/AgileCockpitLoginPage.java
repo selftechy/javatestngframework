@@ -41,9 +41,6 @@ public class AgileCockpitLoginPage extends BasePage{
 	
 	@FindElement(page = "LoginPage", field = "submitButton")
 	private Button submitButton;
-	
-
-
 
 		
 	
